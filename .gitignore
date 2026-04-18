@@ -1,0 +1,11 @@
+# Dossiers de données locales
+/uploads/
+/vendor/
+
+# Fichiers de configuration sensibles
+/api/db.php
+.env
+
+# Fichiers système
+.DS_Store
+Thumbs.db
