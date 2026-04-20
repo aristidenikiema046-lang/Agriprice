@@ -10,12 +10,11 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 // Connexion BDD (On utilise $db comme dans ton code original)
-try {
-    $db = new PDO('mysql:host=localhost;dbname=agriprice;charset=utf8', 'root', '');
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (Exception $e) {
-    die('Erreur : ' . $e->getMessage());
-}
+// Connexion BDD via le fichier centralisé
+require_once __DIR__ . '/../api/db.php';
+
+// On s'assure que la variable s'appelle $db comme dans le reste de ton fichier
+$db = $pdo;
 
 $user_role = $_SESSION['role'];
 $user_id_connected = $_SESSION['user_id'];
