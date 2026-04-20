@@ -6,7 +6,8 @@ header('Content-Type: application/json');
 
 // Connexion BDD
 // Remplace require_once 'db.php'; par :
-require_once 'api/db.php';
+// Remplace require_once 'db.php'; par cette ligne plus précise :
+require_once __DIR__ . '/db.php';
 
 $data = json_decode(file_get_contents('php://input'), true);
 
