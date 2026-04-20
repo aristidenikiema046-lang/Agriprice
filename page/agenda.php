@@ -1,7 +1,8 @@
 <?php
 session_start();
 // 1. On remonte d'un cran pour trouver le dossier api
-require_once '../api/db.php'; 
+// Remplace la ligne 4 par celle-ci :
+require_once __DIR__ . '/../api/db.php';
 
 // Récupération des événements validés
 $stmt = $pdo->query("SELECT * FROM evenements_agricoles WHERE statut = 'valide' ORDER BY date_evenement ASC");
