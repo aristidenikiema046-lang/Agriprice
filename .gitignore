@@ -3,7 +3,7 @@
 /vendor/
 
 # Fichiers de configuration sensibles
-/api/db.php
+
 .env
 
 # Fichiers système
